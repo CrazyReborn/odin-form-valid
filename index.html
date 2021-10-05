@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <head>
+        <script src='./script.js' defer></script>
+    </head>
+    <body>
+        <form>
+            <p>
+              <label for="mail">
+                  <span>Please enter an Email address:</span>
+                  <input type="text" id="mail" name="mail" required>
+                  <span class="error" aria-live="polite"></span>
+              </label>
+            </p>
+            <p>
+              <label for="country">
+                <span>Please enter your Country:</span>
+                <input type="text" id="country" name="country" required>
+                <span class="error" aria-live="polite"></span>
+            </label>
+            </p>
+            <p>
+            <label for="zip-code">
+                <span>Please enter your Zip Code:</span>
+                <input type="text" id="zip-code" name="zip-code" required>
+                <span class="error" aria-live="polite"></span>
+            </label>
+            </p>
+            <p>
+            <label for="password">
+                <span>Please enter your password:</span>
+                <input type="text" id="password" name="password" required>
+                <span class="error" aria-live="polite"></span>
+            </label>
+            </p>
+            <p>
+            <label for="password-confirm">
+                <span>Please enter your password:</span>
+                <input type="text" id="password-confirm" name="password-confirm" required>
+                <span class="error" aria-live="polite"></span>
+            </label>
+            </p>
+            <button type="submit">Submit</button>
+          </form>
+    </body>
+</html>
