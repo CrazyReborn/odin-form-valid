@@ -34,6 +34,26 @@ function showError (input, inputErr) {
 
 }
 
+//On imput checks
+inputs.forEach((input, index) => {
+    input.addEventListener('input', e=> {
+        if (!input.validity.valid) {
+            showError(input, inputsErr[index]);
+        }
+    })
+})
+
+
+//Check passoword confirm
+function checkPasswordConfirm () {
+    if (password.value !== passwordConfirm.value) {
+        passwordConfirmErr.textContent = 'Passwords do not match!';
+    }
+    else {
+        passwordConfirmErr.textContent = '';
+    }
+}
+
 //On form submit
 submit.addEventListener('click', e=> {
     inputs.forEach((input, index) => {
@@ -41,5 +61,6 @@ submit.addEventListener('click', e=> {
             showError(input, inputsErr[index]);
         }
     })
+    checkPasswordConfirm();
     e.preventDefault();
 })
